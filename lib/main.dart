@@ -4,7 +4,10 @@ import 'dart:async';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  // 横向きで運用する
+
+  // 横向きで全画面運用（ステータスバー/ナビゲーションバーを消す）
+  SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
+
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.landscapeLeft,
     DeviceOrientation.landscapeRight,
